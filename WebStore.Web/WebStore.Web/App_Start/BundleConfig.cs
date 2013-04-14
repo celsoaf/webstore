@@ -20,8 +20,8 @@ namespace WebStore.Web.App_Start
                 .Include("~/scripts/jquery.validate.js")
                 .Include("~/scripts/bootstrap.js")
                 .Include("~/scripts/knockout-{version}.js")
-                //.Include("~/scripts/sammy-{version}.js")
-                //.Include("~/scripts/moment.js")
+                .Include("~/scripts/sammy-{version}.js")
+                .Include("~/scripts/moment.js")
                 //.Include("~/scripts/Q.js")
                 //.Include("~/scripts/breeze.debug.js")
                 .Include("~/scripts/toastr.js"));

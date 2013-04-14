@@ -1,4 +1,4 @@
-﻿define(['dataservice'],
+﻿define(['services/dataservice'],
     function (dataservice) {
         var products = ko.observableArray();
         var initialized = false;
@@ -6,7 +6,7 @@
         var vm = {
             activate: activate,
             products: products,
-            title: 'Produtos',
+            title: 'Products',
             refresh: refresh
         };
 

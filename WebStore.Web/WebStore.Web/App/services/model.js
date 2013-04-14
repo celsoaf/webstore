@@ -4,14 +4,26 @@
         return addProductPartialComputed(
             mapToObservable(dto));
     };
+
+    var clientPartial = function(dto) {
+        return addClientPartialComputed(
+            mapToObservable(dto));
+    };
     
     var model = {
-        productPartial: productPartial
+        ProductPartial: productPartial,
+        ClientPartial: clientPartial
     };
 
     return model;
 
     function addProductPartialComputed(entity) {
+
+
+        return entity;
+    }
+
+    function addClientPartialComputed(entity) {
 
 
         return entity;

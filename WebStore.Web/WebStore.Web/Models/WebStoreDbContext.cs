@@ -21,5 +21,6 @@ namespace WebStore.Web.Models
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Client> Clients { get; set; }
     }
 }

@@ -100,7 +100,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\dataservice.js" />
+    <Content Include="App\config.js" />
+    <Content Include="App\services\dataservice.js" />
     <Content Include="App\durandal\amd\almond-custom.js" />
     <Content Include="App\durandal\amd\optimizer.exe" />
     <Content Include="App\durandal\amd\r.js" />
@@ -121,13 +122,16 @@
     <Content Include="App\durandal\viewModel.js" />
     <Content Include="App\durandal\viewModelBinder.js" />
     <Content Include="App\durandal\widget.js" />
-    <Content Include="App\logger.js" />
+    <Content Include="App\services\logger.js" />
     <Content Include="App\main.js" />
-    <Content Include="App\model.js" />
-    <Content Include="App\products.html" />
-    <Content Include="App\products.js" />
-    <Content Include="App\shell.html" />
-    <Content Include="App\shell.js" />
+    <Content Include="App\services\model.js" />
+    <Content Include="App\viewmodels\clients.js" />
+    <Content Include="App\views\clients.html" />
+    <Content Include="App\views\nav.html" />
+    <Content Include="App\views\products.html" />
+    <Content Include="App\viewmodels\products.js" />
+    <Content Include="App\views\shell.html" />
+    <Content Include="App\viewmodels\shell.js" />
     <Content Include="App_Data\WebStoreDb.sdf" />
     <Content Include="Content\durandal.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
@@ -224,6 +228,8 @@
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
     <Content Include="Scripts\toastr.js" />
@@ -252,15 +258,17 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201304130041531_initial.cs" />
-    <Compile Include="Migrations\201304130041531_initial.Designer.cs">
-      <DependentUpon>201304130041531_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201304142340237_initial.cs" />
+    <Compile Include="Migrations\201304142340237_initial.Designer.cs">
+      <DependentUpon>201304142340237_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\WebStoreDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -276,8 +284,8 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201304130041531_initial.resx">
-      <DependentUpon>201304130041531_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201304142340237_initial.resx">
+      <DependentUpon>201304142340237_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -291,7 +299,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63999</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
