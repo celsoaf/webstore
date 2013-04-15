@@ -23,7 +23,7 @@ define(function (require) {
         // Defaults to viewmodels/views/views. 
         viewLocator.useConvention();
 
-        app.setRoot('viewmodels/shell');
+        app.setRoot('viewmodels/shell', 'entrance');
 
         // override bad route behavior to write to 
         // console log and show error toast
