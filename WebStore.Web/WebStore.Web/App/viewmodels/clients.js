@@ -1,5 +1,5 @@
-﻿define(['services/dataservice'],
-    function (dataservice) {
+﻿define(['services/datacontext'],
+    function (datacontext) {
         var clients = ko.observableArray();
         var initialized = false;
             
@@ -20,6 +20,6 @@
         }
 
         function refresh() {
-            return dataservice.getClientPartials(clients);
+            return datacontext.getClients(clients);
         }
     });
